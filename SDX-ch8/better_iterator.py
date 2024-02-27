@@ -27,5 +27,7 @@ class BetterCursor:
             if self._col == len(self._text[self._row]):
                 self._row += 1
                 self._col = 0
+                if len(self._text[self._row]) == 0:
+                    self._advance()
     # [/advance]
 # [/cursor]
