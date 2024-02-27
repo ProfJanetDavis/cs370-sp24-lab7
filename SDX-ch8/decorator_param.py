@@ -7,8 +7,10 @@ def wrap(label):                  # function returning a decorator
         return _inner
     return _decorate
 
+
 @wrap("wrapping")                 # call 'wrap' to get a decorator
 def original(message):            # decorator applied here
     print(f"original: {message}")
-
-original("example")
+    
+if __name__ == '__main__':
+    original("example")
